@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  next-learn-db:
+    image: postgres:latest
+    container_name: next-learn-db
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_USER: andreh
+      POSTGRES_PASSWORD: 1986Andre
+      POSTGRES_DB: next-learn
+    volumes:
+      - next-learn-data:/var/lib/postgresql/data
+
+volumes:
+  next-learn-data:
